@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: #56A3A6;
+    /* PROBLEM 1: Make the header stick to the top as you scroll */
+    position: fixed;
+}
+
+.content {
+    width: 800px;
+    /* PROBLEM 2: Align the page content to the center of the screen */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#image-banner {
+    background-image: url('../img/sf_banner.png');
+    background-size: cover;
+    width: 100%;
+    height: 600px;
+}
+
+
+#other-posts {
+    overflow: hidden;
+    margin-bottom: 100px;
+}
+
+.image-card, .image-card-color-overlay {
+    width: 380px;
+    height: 200px;
+}
+
+.image-card {
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    margin-right: 40px;
+    /* PROBLEM 3: Give .image-card the appropriate position type */
+    position: relative;
+
+}
+
+.image-card:last-child {
+    margin-right: 0;
+}
+
+.image-card img {
+    width: 100%;
+}
+
+.image-card-color-overlay {
+    position: absolute;
+    /* PROBLEM 4: Move the color overlay to cover the image properly */
+    top: 0px;
+    left: 0px;
+    /* PROBLEM 5: What should the opacity be when there is no hover? */
+    opacity: 0;
+    transition: 0.3s;
+    background-color: navy;
+}
+
+.image-card:hover .image-card-color-overlay {
+    /* PROBLEM 5: Pick an opacity for the blue hover effect */
+    opacity: 0.7;
+}
+
+.image-card-text {
+    /* PROBLEM 6: Similar to .image-card-cover-overlay, position the card text */
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    font-family: 'Baloo Tamma 2', serif;
+    font-size: 35pt;
+    font-weight: 300;
+    color: #e2afae; 
+    
+    
+}
+.image-card:hover .image-card-text {
+    color: #DB504A; 
+}
+
+
+/* PROBLEM 7: Improve the typography and colors of this page! */
+
+#title {
+    /* font-family: 'TiltWarp', serif;
+     */
+     font-family: 'Baloo Tamma 2', serif;
+     font-size: 25pt;
+     font-weight: 1000;
+
+     color: #dfcb7c;
+ 
+     
+
+}
+
+h1 {
+    font-family: 'Baloo Tamma 2', serif;
+    font-size: 25pt;
+    font-weight: 500;
+    /* color: #4F6D7A; */
+    color: #084C61;
+    
+}
+
+h2 {
+    font-family: 'Lato', serif;
+    font-size: 20pt;
+    font-weight: 300;
+    color: #56A3A6;
+}
+
+h3 {
+    font-family: 'Lato', serif;
+    font-size: 20pt;
+    font-weight: 300;
+    color: #56A3A6;
+}
+
+p {
+    font-family: 'Baloo Tamma 2', serif;
+    font-size: 12pt;
+    color: #084C61;
+
+}
