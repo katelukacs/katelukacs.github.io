@@ -1,0 +1,134 @@
+
+body{
+    margin:0;
+    /* display:-webkit-box;
+    font-family:'Lato', 'Times New Roman', Times, serif; */
+    /* height:100%; */
+    background-color: #b48b7d;
+    color: #2b2118;
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 27%;
+    background-color: #b48b7d;
+    margin: 0;
+    
+}
+
+#nav--name{
+    color: #D4D2D5;
+    font-size: 40px;
+    font-weight: 200;
+    background-color: #6F1A07;
+    width:100%;
+    height: 75px;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nav--primary{
+    font-size: 34px;
+    padding-top: 20px;
+    padding-bottom: 0px;
+    letter-spacing: 0.1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nav--primary .nav--button:hover, #nav--primary .nav--button--catering:hover {
+    -webkit-text-stroke-width: 2px;
+    cursor: pointer;
+}
+
+
+#nav--primary .nav--button{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #2b2118;
+    
+}
+#nav--primary .nav--button--catering{
+    padding-top: 10px;
+    padding-bottom: 30px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #2b2118;
+    border-bottom: 3px solid #6F1A07; /* whichever color you prefer */
+}
+
+
+#main .background--image{
+    mix-blend-mode: soft-light;
+    position: fixed;
+    display:flex
+}
+#nav--secondary .nav--button--merch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 0px;
+}
+
+#nav--secondary .nav--button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 0px;
+}
+
+#nav--secondary .nav--button:hover, #nav--secondary .nav--button--merch:hover{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #2b2118;
+    cursor: pointer;
+}
+
+
+#main {
+    width: 73%;
+}
+img {
+    max-width:100%;
+    height:auto;
+}
+#main .text{
+    font-size: 50px;
+    position: absolute;
+    top: 20%;
+    left: 55%;
+    -webkit-text-stroke-width: 3.5px;
+    -webkit-text-stroke-color: #2b2118;
+    letter-spacing: 0.1em;
+}
+
+#main .text2{
+    font-size: 50px;
+
+    position: absolute;
+    top: 30%;
+    left: 55%;
+    -webkit-text-stroke-width: 3.5px;
+    -webkit-text-stroke-color: #2b2118;
+    letter-spacing: 0.1em;
+}
+
+a {
+    color: #2b2118;
+    text-decoration:none;
+}
+a:active {
+    -webkit-text-stroke-width: 3.5px;
+}
+
+#home {
+    text-decoration: underline;
+}
