@@ -1,11 +1,5 @@
 html, body {width:100%; height:100%; margin:0; padding: 0;}
 
-/* html {
-    animation-name: slide;
-    animation-duration: 3s;
-    animation-iteration-count: 1;
-
-} */
 body{
     font-family: 'DM Sans', sans-serif;
     color: #2b2118;
@@ -29,13 +23,6 @@ body{
     to {
         transform: translateX(0%);
     }
-}
-/* 
-#map{
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;
 }
 
 /* Create a top header that includes the title, slogan and a split section for top navigation */
@@ -67,6 +54,11 @@ body{
         font-size: 32px;
     }
 }
+@media (max-height: 800px) {
+    #top-bar .name {
+        font-size: 32px;
+    }
+}
 
 #top-bar .slogan {
     color:#FFB688;
@@ -75,6 +67,12 @@ body{
 }
 
 @media (max-width: 1100px) {
+    #top-bar .slogan {
+        font-size: 20px;
+    }
+}
+
+@media (max-height: 800px) {
     #top-bar .slogan {
         font-size: 20px;
     }
@@ -95,8 +93,14 @@ body{
     }
 }
 
+@media (max-height: 800px) {
+    #top-bar a {
+        font-size: 20px;
+    }
+}
+
 #text {
-    padding-left: 28%;
+    padding-left: 30%;
     padding-right: 5%;
     color: white;
     font-weight: 100;
@@ -118,6 +122,12 @@ body{
     }
 }
 
+@media (max-height: 800px) {
+    .clickhere {
+        font-size: 26px;
+    }
+}
+
 .get-to-know{
     color: rgb(2, 2, 2);
     font-size: 24px;
@@ -126,7 +136,6 @@ body{
     justify-content: center;
     justify-content: space-evenly;
 }
-
 
 .get-to-know-box{
     display: flex;
@@ -139,6 +148,13 @@ body{
     opacity: 0.3;
 }
 @media (max-width: 1100px) {
+    .get-to-know-box{
+        width: 250px;
+        height: 350px;  
+    }
+}
+
+@media (max-height: 800px) {
     .get-to-know-box{
         width: 250px;
         height: 350px;  
@@ -158,6 +174,12 @@ body{
     }
 }
 
+@media (max-height: 800px) {
+    .get-to-know-thoughts {
+        font-size: 20px;
+    }
+}
+
 .get-to-know .get-to-know-image {
     width: 300px;
     height: 300px;
@@ -166,6 +188,13 @@ body{
 } 
 
 @media (max-width: 1100px) {
+    .get-to-know .get-to-know-image {
+        width: 250px;
+        height: 250px;  
+    }
+}
+
+@media (max-height: 800px) {
     .get-to-know .get-to-know-image {
         width: 250px;
         height: 250px;  
