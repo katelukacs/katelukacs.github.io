@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
-    
+
     <head>
         <meta charset="UTF-8">
         <title>BenKateKoda</title>
@@ -9,11 +9,11 @@
         <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
         <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
 
-
-
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    
+        <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
 
     <body> 
@@ -24,22 +24,40 @@
 
             
             <div class = "top-right">
-                <a href="aboutus.html">about us</a>     
+                <a href="index.html" id= "home">home</a>
+                <a href="aboutus.html" id= "aboutus">about us</a>     
             </div>
         </div>
 
         <div id='map' ></div>
+
+        <div id='bottom-text'>explore the interactive map</div>
         <script>
             mapboxgl.accessToken = 'pk.eyJ1Ijoia21sdWthY3MiLCJhIjoiY2xnZWl3aHN1MXRoczNpcGNlYnQybWw0OCJ9.UJaz7hIJvV9X9cE4uQECUg';
             var map = new mapboxgl.Map({
             container: 'map',
-            style: 'mapbox://styles/kmlukacs/clgs36ybn000v01pz6doebnob',
-                center: [-106.726824,17.496595],
+            style: 'mapbox://styles/kmlukacs/clgsmvs8c001201pp4vboctfp',
+                center: [-94.510640,20.969352 ],
                 zoom: 1.8
     
             });
-        </script>
+            map.on('click', (event) => {
+                // If the user clicked on one of your markers, get its information.
+                const features = map.queryRenderedFeatures(event.point, {
+                    layers: ['surf','sail'] // replace with your layer name
+                });
+                if (!features.length) {
+                    return;
+                }
+                const feature = features[0];
 
-       
+                const popup = new mapboxgl.Popup({ offset: [0, -15] })
+                    .setLngLat(feature.geometry.coordinates)
+                    .setHTML(
+                        `<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`
+                    )
+                    .addTo(map);
+            });
+        </script>   
     </body>
 </html>
